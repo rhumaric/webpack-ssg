@@ -1,0 +1,30 @@
+{
+  "name": "webpack-ssg",
+  "version": "0.1.0",
+  "description": "An experiment to use webpack as a static site generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhumaric/webpack-ssg.git"
+  },
+  "keywords": [
+    "webpack",
+    "static",
+    "site",
+    "jamstack"
+  ],
+  "author": "Romaric Pascal <hello@romaricpascal.is>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhumaric/webpack-ssg/issues"
+  },
+  "homepage": "https://github.com/rhumaric/webpack-ssg#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "husky": "^2.1.0"
+  }
+}
