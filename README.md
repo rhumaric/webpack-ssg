@@ -5,7 +5,7 @@ An experiment to use webpack as a static site generator
 
 Ideas to test out:
 
-- [ ] `.md` to `.html` for a single entry
+- [x] `.md` to `.html` for a single entry
 - [ ] same, for multiple entries, with watch mode
 - [ ] Linking to other `.md` files, compiling them to HTML and having the link `href` pointing in the right place
 - [ ] Discovering CSS assets and compiling them
