@@ -21,6 +21,14 @@ module.exports = {
             name: '[path][name].html'
           }
         },
+        'extract-loader',
+        {
+          loader: 'html-loader',
+          options: {
+            attrs: ['a:href'],
+            root: path.resolve(__dirname, './src')
+          }
+        },
         'markdown-loader'
       ]
     }]
