@@ -21,7 +21,18 @@ module.exports = {
         {
           loader: 'file-loader',
           options: {
-            name: '[path][name].html'
+            name(assetPath) {
+	      const assetName = path.basename(assetPath);
+              const localeRegexp = /(.*)\.(.*?)\.(.*?)/;
+              const nameParts = localeRegexp.exec(assetName);
+              if(nameParts) {
+                const locale = nameParts[2];
+                const basename = nameParts[1];
+                return `${locale}/[path]${basename}.html`;
+              } else {
+                return '[path][name].html'
+              }
+            }
           }
         },
         'extract-loader',
