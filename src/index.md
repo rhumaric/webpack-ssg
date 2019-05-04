@@ -6,4 +6,5 @@ Will it rebuild?
 
 *Yes it did!*
 
-[A link](/linked.md)
+[A link](linked.md)
+[Link to a page inside folder](/folder/page-in-folder.md)

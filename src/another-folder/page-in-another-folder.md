@@ -1,0 +1,2 @@
+Page in another folder
+===

@@ -7,9 +7,12 @@ module.exports = {
   context: path.resolve(__dirname, './src'),
   entry: WebpackWatchedGlobEntries.getEntries(
     [
-      path.resolve(__dirname, 'src/**/*.md'),
+      path.resolve(__dirname, 'src/index.md'),
     ],
   ),
+  output: {
+    publicPath: '/',
+  },
   stats: 'errors-only',
   module: {
     rules: [{
@@ -26,7 +29,7 @@ module.exports = {
           loader: 'html-loader',
           options: {
             attrs: ['a:href'],
-            root: path.resolve(__dirname, './src')
+            root: path.resolve(__dirname,'./src')
           }
         },
         'markdown-loader'
