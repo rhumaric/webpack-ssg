@@ -1,4 +1,4 @@
-Index en franÃais
+Index en franÃ§ais
 ===
 
-Pour tester le multilingue
+Pour tester le multilingue. Avec un peu de changement.

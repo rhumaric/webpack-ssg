@@ -22,10 +22,10 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name(assetPath) {
-	      const assetName = path.basename(assetPath);
+              const assetName = path.basename(assetPath);
               const localeRegexp = /(.*)\.(.*?)\.(.*?)/;
               const nameParts = localeRegexp.exec(assetName);
-              if(nameParts) {
+              if (nameParts) {
                 const locale = nameParts[2];
                 const basename = nameParts[1];
                 return `${locale}/[path]${basename}.html`;
@@ -40,15 +40,19 @@ module.exports = {
           loader: 'html-loader',
           options: {
             attrs: ['a:href'],
-            root: path.resolve(__dirname,'./src')
+            root: path.resolve(__dirname, './src')
           }
         },
+        'layout-loader',
         'markdown-loader'
       ]
     }]
   },
   resolve: {
     extensions: ['.wasm', '.mjs', '.js', '.json', '.md']
+  },
+  resolveLoader: {
+    modules: ['build/loaders', 'node_modules']
   },
   plugins: [
     new WebpackWatchedGlobEntries(),
