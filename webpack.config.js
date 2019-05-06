@@ -43,7 +43,12 @@ module.exports = {
             root: path.resolve(__dirname, './src')
           }
         },
-        'layout-loader',
+        {
+          loader: 'layout-loader',
+          options: {
+            layout: '@/layouts/site.html'
+          }
+        },
         'markdown-loader'
       ]
     }, {
