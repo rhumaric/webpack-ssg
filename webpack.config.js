@@ -46,10 +46,18 @@ module.exports = {
         'layout-loader',
         'markdown-loader'
       ]
+    }, {
+      test: /.html$/,
+      use: [
+        'html-loader'
+      ]
     }]
   },
   resolve: {
-    extensions: ['.wasm', '.mjs', '.js', '.json', '.md']
+    extensions: ['.wasm', '.mjs', '.js', '.json', '.md'],
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
   },
   resolveLoader: {
     modules: ['build/loaders', 'node_modules']
