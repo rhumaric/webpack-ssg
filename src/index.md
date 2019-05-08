@@ -1,3 +1,9 @@
+---
+title: Test
+description: Let's see
+layout: "@/layouts/another-layout.html"
+---
+
 Test
 ====
 

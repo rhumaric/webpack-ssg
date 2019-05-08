@@ -50,7 +50,8 @@ module.exports = {
             layout: '@/layouts/site.html'
           }
         },
-        'markdown-loader'
+        'markdown-loader',
+        'front-matter-metadata-loader'
       ]
     }, {
       test: /.html$/,

@@ -5,7 +5,8 @@ const ModuleMetadataPlugin = require('../plugins/moduleMetadata');
 module.exports = function (content) {
   const options = loaderUtils.getOptions(this);
   const callback = this.async();
-  this.loadModule(options.layout, (err, layoutContent) => {
+  const metadata = ModuleMetadataPlugin.getModuleMetadata(this);
+  this.loadModule(metadata.layout || options.layout, (err, layoutContent) => {
     if (err) {
       return callback(err);
     }
