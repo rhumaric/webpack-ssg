@@ -2,6 +2,7 @@ const WebpackBar = require('webpackbar');
 const Stylish = require('webpack-stylish');
 const WebpackWatchedGlobEntries = require('webpack-watched-glob-entries-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ModuleMetadataPlugin = require('./build/plugins/moduleMetadata');
 const path = require('path');
 module.exports = {
   context: path.resolve(__dirname, './src'),
@@ -71,6 +72,7 @@ module.exports = {
     new WebpackWatchedGlobEntries(),
     new WebpackBar(),
     new Stylish(),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new ModuleMetadataPlugin()
   ]
 }

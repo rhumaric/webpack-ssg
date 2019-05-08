@@ -1,5 +1,6 @@
 const exec = require('../lib/exec');
 const loaderUtils = require('loader-utils');
+const ModuleMetadataPlugin = require('../plugins/moduleMetadata');
 
 module.exports = function (content) {
   const options = loaderUtils.getOptions(this);
