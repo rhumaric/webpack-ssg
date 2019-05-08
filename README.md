@@ -11,8 +11,8 @@ Ideas to test out:
 - [ ] Discovering CSS assets and compiling them
 - [ ] Discovering JS assets and compiling them (check `import` and chunk splitting)
 - [ ] Ignore export of `.js` file for `.md` entries
-- [ ] Set a common layout for `.md` entries
-- [ ] Set layout per file through a frontmatter
+- [x] Set a common layout for `.md` entries
+- [ ] Set layout per file through a frontmatter (see: https://github.com/webpack/webpack/blob/a67ffcda1c6ffe0a08a34d3b944fec0db38ad57a/lib/NormalModule.js#L221)
 - [ ] Add site wide metadata that can be used in layout and/or `.md` files
 - [ ] Add support for multilingual pages
 - [ ] Add support for handling HTML or Pug content
