@@ -11,7 +11,9 @@ module.exports = function (content) {
       return callback(err);
     }
     const layoutHTML = exec(layoutContent, options.layout, this.context);
-    callback(null, layoutHTML.replace('${content}', content));
+    // Make the HTML into a JS template literal
+    const template = new Function('data', 'with(data) { return `' + layoutHTML + '` }');
+    callback(null, template({ ...metadata, content }));
   });
   return;
 }
