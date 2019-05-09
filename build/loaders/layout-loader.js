@@ -11,7 +11,11 @@ module.exports = function (content) {
       return callback(err);
     }
     const layoutHTML = exec(layoutContent, options.layout, this.context);
+    if(typeof layoutHTML == 'function') {
+      callback(null, layoutHTML({...metadata,content}));
+    } else {
     callback(null, layoutHTML.replace('${content}', content));
+    }
   });
   return;
 }
