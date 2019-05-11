@@ -1,7 +1,7 @@
 ---
 title: Test
 description: Let's see
-layout: "@/layouts/another-layout.html"
+layout: "@/layouts/site.js"
 ---
 
 Test

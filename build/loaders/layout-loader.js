@@ -10,10 +10,13 @@ module.exports = function (content) {
     if (err) {
       return callback(err);
     }
-    const layoutHTML = exec(layoutContent, options.layout, this.context);
-    // Make the HTML into a JS template literal
-    const template = new Function('data', 'with(data) { return `' + layoutHTML + '` }');
-    callback(null, template({ ...metadata, content }));
+    const module = exec(layoutContent, options.layout, this.context);
+    if (typeof module == 'string') {
+      const template = new Function('data', 'with(data) { return `' + module + '` }');
+      callback(null, template({ ...metadata, content }));
+    } else {
+      callback(null, module({ ...metadata, content }));
+    }
   });
   return;
 }
