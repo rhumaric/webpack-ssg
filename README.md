@@ -1,3 +1,5 @@
+> This repository is now [hosted on Gitlab](https://gitlab.com/romaricpascal/webpack-ssg). Please head there if you wish to contribute. Thanks 🙂
+
 webpack-ssg
 ===========
 
